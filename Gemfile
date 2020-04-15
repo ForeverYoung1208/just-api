@@ -54,3 +54,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rack-cors'
+
+group :production do
+	# only for passenger stand-alone deployment
+	gem 'passenger'
+end
