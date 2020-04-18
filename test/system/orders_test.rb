@@ -14,8 +14,7 @@ class OrdersTest < ApplicationSystemTestCase
     visit orders_url
     click_on "New Order"
 
-    fill_in "Count", with: @order.count
-    fill_in "Item", with: @order.item_id
+    fill_in "Items", with: @order.items
     fill_in "Price total", with: @order.price_total
     fill_in "User email", with: @order.user_email
     click_on "Create Order"
@@ -28,8 +27,7 @@ class OrdersTest < ApplicationSystemTestCase
     visit orders_url
     click_on "Edit", match: :first
 
-    fill_in "Count", with: @order.count
-    fill_in "Item", with: @order.item_id
+    fill_in "Items", with: @order.items
     fill_in "Price total", with: @order.price_total
     fill_in "User email", with: @order.user_email
     click_on "Update Order"
